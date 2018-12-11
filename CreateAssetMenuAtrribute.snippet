@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets
+    xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Create asset menu atrribute for Unity</Title>
+      <Author>Dan Allison (https://twitter.com/Daniel_Allison/)</Author>
+      <Description>Adds a "Create Asset Menu Attribute".</Description>
+      <Shortcut>crtas</Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>UnityEngine</Assembly>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>UnityEngine</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>FileName</ID>
+          <ToolTip>Replace with what the default file name should be.</ToolTip>
+          <Default>New File Name</Default>
+        </Literal>
+        <Literal>
+          <ID>MenuName</ID>
+          <ToolTip>Replace with what the name in the menu should be.</ToolTip>
+          <Default>Menu/Entry</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp">
+        <![CDATA[[CreateAssetMenu(fileName = "$FileName$", menuName = "$MenuName$")]$end$]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

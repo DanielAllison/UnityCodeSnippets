@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets
+    xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Initialise a Vector3 field</Title>
+      <Author>Dan Allison (https://twitter.com/Daniel_Allison/)</Author>
+      <Description>Creates a new Vector3 field.</Description>
+      <Shortcut>nvec</Shortcut>
+    </Header>
+    <Snippet>
+	  <References>
+        <Reference>
+          <Assembly>UnityEngine.CoreModule.dll</Assembly>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>UnityEngine</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>FieldName</ID>
+          <ToolTip>Replace with what the name of the field should be.</ToolTip>
+          <Default>_fieldName</Default>
+        </Literal>
+		<Literal>
+          <ID>xField</ID>
+          <ToolTip>Replace with the value Vector's x component.</ToolTip>
+          <Default>x</Default>
+        </Literal>
+		<Literal>
+          <ID>yField</ID>
+          <ToolTip>Replace with the value Vector's y component.</ToolTip>
+          <Default>y</Default>
+        </Literal>
+		<Literal>
+          <ID>zField</ID>
+          <ToolTip>Replace with the value Vector's z component.</ToolTip>
+          <Default>x</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp">
+        <![CDATA[var $FieldName$ = new Vector3($xField$, $yField$, $zField$);$end$]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

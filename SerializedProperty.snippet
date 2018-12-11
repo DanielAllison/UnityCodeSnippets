@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets
+    xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Serialized private field with property for Unity</Title>
+      <Author>Dan Allison (https://twitter.com/Daniel_Allison/)</Author>
+      <Description>Create a private serialized field and a public property that gets and sets it.</Description>
+      <Shortcut>sprop</Shortcut>
+    </Header>
+    <Snippet>
+      <References>
+        <Reference>
+          <Assembly>UnityEngine.CoreModule.dll</Assembly>
+        </Reference>
+      </References>
+      <Imports>
+        <Import>
+          <Namespace>UnityEngine</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>FieldType</ID>
+          <ToolTip>Replace with the type of field you want.</ToolTip>
+          <Default>int</Default>
+        </Literal>
+        <Literal>
+          <ID>FieldName</ID>
+          <ToolTip>Replace with what the name of the private field should be.</ToolTip>
+          <Default>_fieldName</Default>
+        </Literal>
+        <Literal>
+          <ID>PropertyName</ID>
+          <ToolTip>Replace with what the name of the property should be</ToolTip>
+          <Default>MyProperty</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp">
+        <![CDATA[[SerializeField] private $FieldType$ $FieldName$;
+        public $FieldType$ $PropertyName$ { get { return $FieldName$; } set { $FieldName$ = value; } }$end$]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
